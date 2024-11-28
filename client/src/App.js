@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 const Login = ({ setToken }) => {
     const [username, setUsername] = useState('');
@@ -56,17 +56,11 @@ const App = () => {
 
     return (
         <Router>
-            <Switch>
-                <Route path="/login">
-                    {!token ? <Login setToken={setToken} /> : <Redirect to="/dashboard" />}
-                </Route>
-                <Route path="/dashboard">
-                    {token ? <Dashboard setToken={setToken} /> : <Redirect to="/login" />}
-                </Route>
-                <Route path="/">
-                    <Redirect to={token ? "/dashboard" : "/login"} />
-                </Route>
-            </Switch>
+            <Routes>
+                <Route path="/login" element={!token ? <Login setToken={setToken} /> : <Navigate to="/dashboard" />} />
+                <Route path="/dashboard" element={token ? <Dashboard setToken={setToken} /> : <Navigate to="/login" />} />
+                <Route path="/" element={<Navigate to={token ? "/dashboard" : "/login"} />} />
+            </Routes>
         </Router>
     );
 };
