@@ -2,9 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
+const port = 3001;
+
 app.use(bodyParser.json());
+app.use(cors());
 
 const SECRET_KEY = "your_jwt_secret";
 const users = JSON.parse(fs.readFileSync('users.json', 'utf8'));
@@ -23,4 +27,4 @@ app.post('/login', (req, res) => {
 });
 
 // Start the server
-app.listen(3001, () => console.log('Server running on http://localhost:3001'));
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
