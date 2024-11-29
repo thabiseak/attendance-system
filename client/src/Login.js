@@ -47,7 +47,7 @@ const Login = ({ setToken }) => {
                 />
                 <span className="icon" onClick={() => setShowPassword(!showPassword)}>👁️</span> {/* Eye icon */}
             </div>
-            <button className="button" onClick={handleLogin}>LogIn</button>
+            <button className="button" onClick={handleLogin}>Login</button>
         </div>
     );
 };
