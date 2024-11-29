@@ -13,13 +13,17 @@ app.use(cors());
 const SECRET_KEY = "your_jwt_secret";
 const users = JSON.parse(fs.readFileSync('users.json', 'utf8'));
 
+// Root URL route
+app.get('/', (req, res) => {
+    res.send('Welcome to the Attendance System API');
+});
+
 // Login API
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    const user = users.find((u) => u.username === username && u.password === password);
-
+    const user = users.find(u => u.username === username && u.password === password);
     if (user) {
-        const token = jwt.sign({ username: user.username }, SECRET_KEY, { expiresIn: '1h' });
+        const token = jwt.sign({ username }, SECRET_KEY);
         res.json({ token });
     } else {
         res.status(401).json({ error: 'Invalid username or password' });
@@ -28,3 +32,4 @@ app.post('/login', (req, res) => {
 
 // Start the server
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+
