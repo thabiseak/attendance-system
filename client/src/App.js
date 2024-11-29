@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './Login.css'; // Import the CSS file
 
 const Login = ({ setToken }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = async () => {
         try {
@@ -25,21 +27,31 @@ const Login = ({ setToken }) => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button onClick={handleLogin}>Login</button>
+        <div className="login-container">
+            <div className="logo">
+                <img src="arrow-icon.png" alt="Logo" /> {/* Replace with your logo */}
+            </div>
+            <div className="title">Sign in with user name</div>
+            <div className="subtext">Make a new doc to bring your words, data, and teams together. For free.</div>
+            <div className="input-container">
+                <input
+                    type="text"
+                    placeholder="User Name"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <span className="icon">📧</span> {/* Envelope icon */}
+            </div>
+            <div className="input-container">
+                <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <span className="icon" onClick={() => setShowPassword(!showPassword)}>👁️</span> {/* Eye icon */}
+            </div>
+            <button className="button" onClick={handleLogin}>LogIn</button>
         </div>
     );
 };
