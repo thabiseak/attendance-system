@@ -29,7 +29,7 @@ const Login = ({ setToken }) => {
     return (
         <div className="login-container">
             <div className="logo">
-                <img src="high-res-logo.png" alt="Logo" /> {/* Replace with your high-resolution logo */}
+                <img src="/high-logo.png" alt="Logo" /> {/* Logo from public directory */}
             </div>
             <div className="title">Sign In</div>
             <div className="subtext">Student Attendance Management System. For free.</div>
