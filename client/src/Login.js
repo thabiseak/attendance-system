@@ -31,8 +31,8 @@ const Login = ({ setToken }) => {
             <div className="logo">
                 <img src="/high-logo.png" alt="Logo" /> {/* Logo from public directory */}
             </div>
-            <div className="title">Sign In</div>
-            <div className="subtext">Student Attendance Management System. For free.</div>
+            <div className="title">Sign In | Admin</div>
+            <div className="subtext">Student Attendance Management System</div>
             {error && <div className="error">{error}</div>}
             <div className="input-container">
                 <input
