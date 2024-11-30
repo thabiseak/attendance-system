@@ -1,4 +1,3 @@
-// src/Home.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
@@ -14,7 +13,7 @@ const Home = ({ setToken }) => {
     return (
         <div className="home-container">
             <header className="header">
-                <div className="welcome-message">School students attendance managing system</div>
+                <div className="message">School students attendance managing system</div>
                 <button className="logout-button" onClick={handleLogout}>Logout</button>
             </header>
             <div className="sidebar">
@@ -26,7 +25,7 @@ const Home = ({ setToken }) => {
                 </ul>
             </div>
             <div className="main-content">
-                <h1>Welcome Back Thabiseak_Intern2025</h1>
+                <h1>Welcome Back! Thabiseak_Intern2025</h1>
                 <div className="info-boxes">
                     <div className="info-box">
                         <div className="icon">👥</div>
