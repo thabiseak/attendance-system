@@ -54,6 +54,7 @@ const Login = ({ setToken }) => {
                 />
                 <span className="icon" onClick={() => setShowPassword(!showPassword)}>🔒</span> {/* Lock icon */}
             </div>
+            {/*
             <div className="options">
                 <label>
                     <input
@@ -64,10 +65,11 @@ const Login = ({ setToken }) => {
                     Remember Me
                 </label>
                 <a href="#" className="forgot-password">Forgot Password?</a>
-            </div>
+            </div>*/}
             <button className="button" onClick={handleLogin} disabled={loading}>
                 {loading ? 'Loading...' : 'Login'}
             </button>
+            
         </div>
     );
 };
