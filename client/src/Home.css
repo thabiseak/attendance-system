@@ -9,7 +9,9 @@ body {
 
 .home-container {
     display: flex;
+    flex-direction: column;
     height: 100vh;
+    width: 100vw;
 }
 
 .header {
@@ -53,6 +55,12 @@ body {
 .sidebar ul li {
     padding: 15px 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
 }
 
 .sidebar ul li:hover {
@@ -60,7 +68,7 @@ body {
 }
 
 .dropdown-arrow {
-    float: right;
+    margin-left: auto;
 }
 
 .main-content {
@@ -68,6 +76,7 @@ body {
     padding: 80px 20px 20px 20px;
     flex: 1;
     overflow-y: auto;
+    background: #f4f4f4;
 }
 
 .info-boxes {
@@ -115,16 +124,17 @@ body {
 }
 
 .logout-button {
-    background: #e74c3c;
-    color: white;
+    background: white;
+    color: #2980b9;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px; /* More curved corners */
     cursor: pointer;
+    margin-right: 30px; /* Move the button to the left */
 }
 
 .logout-button:hover {
-    background: #c0392b;
+    background: #ccc;
 }
 
 .welcome-section {

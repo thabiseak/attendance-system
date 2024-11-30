@@ -5,7 +5,6 @@ import './Home.css';
 
 const Home = ({ setToken }) => {
     const navigate = useNavigate();
-    const userName = "User"; // Replace with actual user name
 
     const handleLogout = () => {
         setToken('');
@@ -15,79 +14,50 @@ const Home = ({ setToken }) => {
     return (
         <div className="home-container">
             <header className="header">
-                <div className="logo">Institution Logo</div>
-                <nav className="nav">
-                    <a href="#">Dashboard</a>
-                    <a href="#">Attendance Records</a>
-                    <a href="#">Profile</a>
-                </nav>
+                <div className="welcome-message">School student attendance managing system</div>
                 <button className="logout-button" onClick={handleLogout}>Logout</button>
             </header>
-            <section className="welcome-section">
-                <h1>Welcome, {userName}!</h1>
-            </section>
-            <section className="attendance-summary">
-                <h2>Today's Attendance</h2>
-                <p>You have marked attendance for 5 out of 5 students today.</p>
-                <a href="#">View detailed attendance records</a>
-            </section>
-            <section className="mark-attendance">
-                <h2>Mark Attendance</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>Mark Attendance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Student 1</td>
-                            <td><input type="checkbox" /></td>
-                        </tr>
-                        <tr>
-                            <td>Student 2</td>
-                            <td><input type="checkbox" /></td>
-                        </tr>
-                        {/* Add more students as needed */}
-                    </tbody>
-                </table>
-                <button className="submit-button">Submit</button>
-            </section>
-            <section className="previous-attendance">
-                <h2>Previous Attendance Records</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>2024-07-01</th>
-                            <th>2024-07-02</th>
-                            {/* Add more dates as needed */}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Student 1</td>
-                            <td>Present</td>
-                            <td>Absent</td>
-                            {/* Add more attendance status as needed */}
-                        </tr>
-                        <tr>
-                            <td>Student 2</td>
-                            <td>Present</td>
-                            <td>Present</td>
-                            {/* Add more attendance status as needed */}
-                        </tr>
-                        {/* Add more students as needed */}
-                    </tbody>
-                </table>
-            </section>
-            <footer className="footer">
-                <p>Contact Information: contact@institution.com</p>
-                <p>
-                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Help/Support</a>
-                </p>
-            </footer>
+            <div className="sidebar">
+                <ul>
+                    <li><i className="fas fa-tachometer-alt"></i> Dashboard</li>
+                    <li><i className="fas fa-building"></i> Classes <span className="dropdown-arrow"><i className="fas fa-chevron-down"></i></span></li>
+                    <li><i className="fas fa-user-graduate"></i> Student <span className="dropdown-arrow"><i className="fas fa-chevron-down"></i></span></li>
+                    <li><i className="fas fa-chart-line"></i> Report <span className="dropdown-arrow"><i className="fas fa-chevron-down"></i></span></li>
+                </ul>
+            </div>
+            <div className="main-content">
+                <h1>Welcome Back Thabiseak_Intern2025</h1>
+                <div className="info-boxes">
+                    <div className="info-box">
+                        <div className="icon">👥</div>
+                        <div className="text">
+                            <h2>REGISTERED STUDENTS</h2>
+                            <p>4</p>
+                        </div>
+                    </div>
+                    <div className="info-box">
+                        <div className="icon">📄</div>
+                        <div className="text">
+                            <h2>LISTED CLASSES</h2>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div className="info-box">
+                        <div className="icon">📋</div>
+                        <div className="text">
+                            <h2>STUDENT ATTENDANCE TODAY</h2>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div className="info-box">
+                        <div className="icon">📅</div>
+                        <div className="text">
+                            <h2>STUDENT ATTENDANCE YESTERDAY</h2>
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
