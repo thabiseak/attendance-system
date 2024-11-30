@@ -31,8 +31,8 @@ const Login = ({ setToken }) => {
             <div className="logo">
                 <img src="high-logo.png" alt="Logo" /> {/* Replace with your high-resolution logo */}
             </div>
-            <div className="title">Sign In</div>
-            <div className="subtext">Student Attendance Management System. For free.</div>
+            <div className="title">Login to system</div>
+            <div className="subtext">Effortlessly track and manage students attendance records with accuracy</div>
             {error && <div className="error">{error}</div>}
             <div className="input-container">
                 <label htmlFor="username">Username</label>
@@ -47,7 +47,7 @@ const Login = ({ setToken }) => {
                 <span className="icon">👤</span> {/* User icon */}
             </div>
             <div className="input-container">
-                <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password</label>
                 <input
                     id="password"
                     type={showPassword ? "text" : "password"}

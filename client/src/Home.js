@@ -14,7 +14,7 @@ const Home = ({ setToken }) => {
     return (
         <div className="home-container">
             <header className="header">
-                <div className="welcome-message">School student attendance managing system</div>
+                <div className="welcome-message">School students attendance managing system</div>
                 <button className="logout-button" onClick={handleLogout}>Logout</button>
             </header>
             <div className="sidebar">

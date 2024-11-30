@@ -10,7 +10,7 @@ body {
 }
 
 .login-container {
-    background: white;
+    background: rgb(239, 241, 241);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,8 +104,8 @@ body {
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    width: 50%;
+    border-radius: 20px;
+    width: 40%;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
