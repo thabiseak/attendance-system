@@ -4,7 +4,7 @@ body {
 }
 
 .login-page {
-    background-image: url(../public/download.jpeg);
+    background-image: url(../public/bg.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
