@@ -31,8 +31,8 @@ const Login = ({ setToken }) => {
                 <div className="logo">
                     <img src="high-logo.png" alt="Logo" /> 
                 </div>
-                <div className="title">Login to system</div>
-                <div className="subtext">Student Attendance Management System. For free.</div>
+                <div className="title">Access Your Account</div>
+                <div className="subtext">Student Attendance Management System</div>
                 {error && <div className="error">{error}</div>}
                 <div className="input-container">
                     <label htmlFor="username" className="sr-only">Username</label>
