@@ -116,8 +116,8 @@ body {
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    width: 100%;
+    border-radius: 15px;
+    width: 40%;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;

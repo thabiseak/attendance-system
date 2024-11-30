@@ -39,7 +39,7 @@ const Login = ({ setToken }) => {
                     <input
                         id="username"
                         type="text"
-                        placeholder="Enter your username"
+                        placeholder="Username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         aria-label="Username" />
@@ -50,7 +50,7 @@ const Login = ({ setToken }) => {
                     <input
                         id="password"
                         type={showPassword ? "text" : "password"}
-                        placeholder="Enter your password"
+                        placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         aria-label="Password" />
