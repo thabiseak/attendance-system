@@ -29,15 +29,17 @@ const Login = ({ setToken }) => {
     return (
         <div className="login-container">
             <div className="logo">
-                <img src="/high-logo.png" alt="Logo" /> {/* Logo from public directory */}
+                <img src="high-logo.png" alt="Logo" /> {/* Replace with your high-resolution logo */}
             </div>
-            <div className="title">Sign In | Admin</div>
-            <div className="subtext">Student Attendance Management System</div>
+            <div className="title">Sign In</div>
+            <div className="subtext">Student Attendance Management System. For free.</div>
             {error && <div className="error">{error}</div>}
             <div className="input-container">
+                <label htmlFor="username">Username</label>
                 <input
+                    id="username"
                     type="text"
-                    placeholder="Enter your username"
+                    placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     aria-label="Username"
@@ -45,31 +47,20 @@ const Login = ({ setToken }) => {
                 <span className="icon">👤</span> {/* User icon */}
             </div>
             <div className="input-container">
+                <label htmlFor="password">Password</label>
                 <input
+                    id="password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter your password"
+                    placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     aria-label="Password"
                 />
                 <span className="icon" onClick={() => setShowPassword(!showPassword)}>🔒</span> {/* Lock icon */}
             </div>
-            {/*
-            <div className="options">
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={rememberMe}
-                        onChange={(e) => setRememberMe(e.target.checked)}
-                    />
-                    Remember Me
-                </label>
-                <a href="#" className="forgot-password">Forgot Password?</a>
-            </div>*/}
             <button className="button" onClick={handleLogin} disabled={loading}>
                 {loading ? 'Loading...' : 'Login'}
             </button>
-            
         </div>
     );
 };

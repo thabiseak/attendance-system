@@ -1,7 +1,7 @@
 /* src/Login.css */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(to right, #6dd5fa, #2980b9);
     height: 100vh;
     display: flex;
@@ -16,17 +16,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .logo {
     width: 50px;
     height: 50px;
+    background: lightblue;
+    border-radius: 10px;
     margin: 0 auto 20px;
     display: flex;
     justify-content: center;
@@ -34,8 +30,8 @@ body {
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+    width: 30px;
+    height: 30px;
 }
 
 .title {
@@ -58,6 +54,13 @@ body {
 .input-container {
     position: relative;
     margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .input-container input {
@@ -65,19 +68,13 @@ body {
     padding: 10px 40px 10px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.input-container input:focus {
-    border-color: #2980b9;
-    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
 }
 
 .input-container .icon {
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
-    right: 10px;
+    right: 30px;
     cursor: pointer;
 }
 
@@ -108,7 +105,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 60%;
+    width: 50%;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
